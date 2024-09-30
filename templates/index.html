@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Accident Severity Predictor
+        </div>
+
+        <form action="/" id="Form" method="post">
+            <div class="rows">
+                <div class="columns">
+                    <h3>Time-Related Features</h3>
+                    <div class="inputfield">
+                        <!-- <span class="tt" data-bs-placement="bottom" title="This is the hour">a</span> -->
+                        <label for="Hour_of_Day">Hour of Day</label>
+                        <select id="Hour_of_Day" name="Hour_of_Day" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Early Morning">Early Morning</option>
+                            <option value="Morning Rush">Morning Rush</option>
+                            <option value="Midday">Midday</option>
+                            <option value="Afternoon Rush">Afternoon Rush</option>
+                            <option value="Evening">Evening</option>
+                            <option value="Night">Night</option>
+                        </select>
+                     </div>
+
+                     <div class="inputfield">
+                        <label for="Day_of_week">Day</label>
+                        <select id="Day_of_week" name="Day_of_week" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columns">
+                    <h3>Driver and Casualty Info</h3>
+                    <div class="inputfield">
+                        <label for="Age_band_of_driver">Age of Driver</label>
+                        <select id="Age_band_of_driver" name="Age_band_of_driver" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Under 18">Under 18</option>
+                            <option value="18-30">18-30</option>
+                            <option value="31-50">31-50</option>
+                            <option value="Over 51">Over 51</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+                    </div>
+
+                    <div class="inputfield">
+                        <label for="Age_band_of_casualty">Age of Casualty</label>
+                        <select id="Age_band_of_casualty" name="Age_band_of_casualty" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Under 18">Under 18</option>
+                            <option value="18-30">18-30</option>
+                            <option value="31-50">31-50</option>
+                            <option value="Over 51">Over 51</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rows">
+                <div class="columns">
+                    <h3>Incident Information</h3>
+                    <div class="inputfield">
+                        <label for="Number_of_vehicles_involved">Number of Vehicles Involved</label>
+                        <select id="Number_of_vehicles_involved" name="Number_of_vehicles_involved" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+
+                    <div class="inputfield">
+                        <label for="Number_of_casualties">Number of Casualties</label>
+                        <select id="Number_of_casualties" name="Number_of_casualties" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+
+                    <div class="inputfield">
+                        <label for="Types_of_Junction">Types of Junction</label>
+                        <select id="Types_of_Junction" name="Types_of_Junction" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Y Shape">Y Shape</option>
+                            <option value="Crossing">Crossing</option>
+                            <option value="O Shape">O Shape</option>
+                            <option value="T Shape">T Shape</option>
+                            <option value="X Shape">X Shape</option>
+                            <option value="No junction">No junction</option>
+                            <option value="Unknown">Unknown</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>                   
+                </div>
+
+                <div class="columns">
+                    <h3>Environmental Factors</h3>
+                    <div class="inputfield">
+                        <label for="Area_accident_occured">Area of Accident Occurred</label>
+                        <select id="Area_accident_occured" name="Area_accident_occured" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Residential_areas">Residential areas</option>
+                            <option value="Office areas">Office areas</option>
+                            <option value="Urban Areas">Urban Areas</option>
+                            <option value="Other">Other</option>
+                            <option value="Church_areas">Church areas</option>
+                            <option value="Rural Areas">Rural Areas</option>
+                        </select>
+                    </div>
+
+                    <div class="inputfield">
+                        <label for="Light_conditions">Light Conditions</label>
+                        <select id="Light_conditions" name="Light_conditions" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Daylight">Daylight</option>
+                            <option value="Darkness - lights lit">Darkness - lights lit</option>
+                            <option value="Darkness - no lighting">Darkness - no lighting</option>
+                            <option value="Darkness - lights unlit">Darkness - lights unlit</option>
+                        </select>
+                    </div>
+
+                    <div class="inputfield">
+                        <label for="Weather_conditions">Weather Conditions</label>
+                        <select id="Weather_conditions" name="Weather_conditions" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Raining">Raining</option>
+                            <option value="Raining and Windy">Raining and Windy</option>
+                            <option value="Fog or mist">Fog or mist</option>
+                            <option value="Cloudy">Cloudy</option>
+                            <option value="Windy">Windy</option>
+                            <option value="Snow">Snow</option>
+                            <option value="Unknown">Unknown</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>                                   
+                </div>
+            </div>
+ 
+            <div class="button">
+                <input type="reset" class="btn" id="reset" value="Reset">
+                <input type="submit" class="btn" value="Predict">
+            </div>
+        </form>
+
+        <div class="box">
+            <h2 id="command">Predicted Accident Severity : </h2>
+            <h2 id="prediction">{{pred}}</h2>
+        </div>
+    </div>
+
+    <script>
+        var predValue = "{{ pred }}";
+        var predictionElement = document.getElementById("prediction");
+        var commandElement = document.getElementById("command");
+
+        if (predValue === "") {
+            commandElement.style.display = "none";
+        }
+        
+        if (predValue === "Fatal Injury") {
+            predictionElement.style.color = "#FF0000";
+        } else if (predValue === "Serious Injury") {
+            predictionElement.style.color = "#FFA500";
+        } else {
+            predictionElement.style.color = "#008000";
+        }
+
+        console.log("Color applied: " + predictionElement.style.color);
+
+        const form = document.getElementById("Form");
+        const inputs = form.querySelectorAll("input");
+
+        document.getElementById("reset").addEventListener("click", function() {
+            inputs.forEach(input => {
+            localStorage.removeItem(input.name);
+            });
+            localStorage.clear();  // This clears all data from localStorage
+            form.reset();          // Clears form fields
+        });
+
+        // Save form data before submit
+        document.getElementById("Form").addEventListener("submit", function() {
+            localStorage.setItem("Day_of_week", document.getElementById("Day_of_week").value);
+            localStorage.setItem("Age_band_of_driver", document.getElementById("Age_band_of_driver").value);
+            localStorage.setItem("Types_of_Junction", document.getElementById("Types_of_Junction").value);
+            localStorage.setItem("Number_of_vehicles_involved", document.getElementById("Number_of_vehicles_involved").value);
+            localStorage.setItem("Number_of_casualties", document.getElementById("Number_of_casualties").value);
+
+            localStorage.setItem("Age_band_of_casualty", document.getElementById("Age_band_of_casualty").value);
+            localStorage.setItem("Hour_of_Day", document.getElementById("Hour_of_Day").value);
+            localStorage.setItem("Light_conditions", document.getElementById("Light_conditions").value);
+            localStorage.setItem("Weather_conditions", document.getElementById("Weather_conditions").value);
+            localStorage.setItem("Area_accident_occured", document.getElementById("Area_accident_occured").value);
+        });
+      
+        // Restore form data after reload
+        window.addEventListener("load", function() {
+            if (localStorage.getItem("Day_of_week")) {
+            document.getElementById("Day_of_week").value = localStorage.getItem("Day_of_week");
+            }
+            if (localStorage.getItem("Age_band_of_driver")) {
+                document.getElementById("Age_band_of_driver").value = localStorage.getItem("Age_band_of_driver");
+            }
+            if (localStorage.getItem("Types_of_Junction")) {
+                document.getElementById("Types_of_Junction").value = localStorage.getItem("Types_of_Junction");
+            }
+            if (localStorage.getItem("Number_of_vehicles_involved")) {
+                document.getElementById("Number_of_vehicles_involved").value = localStorage.getItem("Number_of_vehicles_involved");
+            }
+            if (localStorage.getItem("Number_of_casualties")) {
+                document.getElementById("Number_of_casualties").value = localStorage.getItem("Number_of_casualties");
+            }
+
+
+            if (localStorage.getItem("Age_band_of_casualty")) {
+                document.getElementById("Age_band_of_casualty").value = localStorage.getItem("Age_band_of_casualty");
+            }
+            if (localStorage.getItem("Hour_of_Day")) {
+                document.getElementById("Hour_of_Day").value = localStorage.getItem("Hour_of_Day");
+            }
+            if (localStorage.getItem("Light_conditions")) {
+                document.getElementById("Light_conditions").value = localStorage.getItem("Light_conditions");
+            }
+            if (localStorage.getItem("Weather_conditions")) {
+                document.getElementById("Weather_conditions").value = localStorage.getItem("Weather_conditions");
+            }
+            if (localStorage.getItem("Area_accident_occured")) {
+                document.getElementById("Area_accident_occured").value = localStorage.getItem("Area_accident_occured");
+            }
+        });
+    </script>
+
+    <!-- <script>
+        const tootips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+            new bootstrap.Tooltip(t)
+        })
+    </script> -->
+
+</body>
+</html>
