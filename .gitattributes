@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+model/accident_severity.pickle filter=lfs diff=lfs merge=lfs -text
+*.pickle filter=lfs diff=lfs merge=lfs -text
