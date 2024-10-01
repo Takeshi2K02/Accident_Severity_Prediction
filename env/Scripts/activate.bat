@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\Campus\Takeshi\Campus\SLIIT\3rd Year\1st Semester\Modules\FDM\Mini Project\Website\env
+set VIRTUAL_ENV=D:\Campus\Takeshi\Campus\SLIIT\3rd Year\1st Semester\Modules\FDM\Mini Project\Website\Accident_Severity_Prediction\env
 
 if not defined PROMPT set PROMPT=$P$G
 
