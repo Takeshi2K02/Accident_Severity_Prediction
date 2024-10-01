@@ -1,0 +1,8 @@
+version: 1
+services:
+  - type: web
+    name: my-flask-app  # Change this to your app name
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
