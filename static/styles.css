@@ -162,7 +162,7 @@ p {
 
 input[type="submit"], input[type="reset"] {
   width: 25%;
-  height: 60px;
+  height: auto;
   background-color: #2571F0;
   color: white;
   border: none;
@@ -173,6 +173,7 @@ input[type="submit"], input[type="reset"] {
   border-radius: 12px;
   cursor: pointer;
   margin-top: 20px;
+  text-align: center;
 }
 
 
@@ -184,13 +185,24 @@ input[type="submit"]:hover, input[type="reset"]:hover {
   margin: 40px 0 0 0;
 }
 
-@media screen and (max-width: 1080px) {
-  .rows {
-      flex-direction: column;
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+    padding: 20px;
   }
-
+  .rows {
+    flex-direction: column;
+  }
   .columns {
-      padding: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  input[type="submit"], input[type="reset"] {
+    width: 100%; /* Full width for mobile screens */
+    font-size: 20px; /* Reduce font size */
+    padding: 10px; /* Adjust padding */
   }
 }
 
