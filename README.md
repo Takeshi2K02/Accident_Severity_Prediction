@@ -29,5 +29,3 @@ The model predicts the severity of the injury as one of the following classes:
 - **Slight Injury**
 - **Serious Injury**
 - **Fatal Injury**
-
-## Project Structure
