@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/predictor">Predictor</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="columns">
+            <div class="title">
+                Predictor Inputs Overview
+            </div>
+
+            <!-- Hour of Day -->
+            <div class="h-inputfield">
+                <h3><label for="Hour_of_Day">Hour of Day</label></h3>
+                <p>This input represents the time of day the accident occurred, broken into categories such as Early Morning, Morning Rush, Midday, etc.</p>
+            </div>
+
+            <!-- Day of Week -->
+            <div class="h-inputfield">
+                <h3><label for="Day_of_week">Day of Week</label></h3>
+                <p>The specific day of the week when the accident happened. Each day might have different traffic conditions, which can affect accident severity.</p>
+            </div>
+
+            <!-- Age Band of Driver -->
+            <div class="h-inputfield">
+                <h3><label for="Age_band_of_driver">Age Band of Driver</label></h3>
+                <p>This input refers to the age group of the driver involved in the accident. The age of the driver can influence driving patterns and accident risks.</p>
+            </div>
+
+            <!-- Age Band of Casualty -->
+            <div class="h-inputfield">
+                <h3><label for="Age_band_of_casualty">Age Band of Casualty</label></h3>
+                <p>This input refers to the age group of any casualties involved in the accident. Certain age groups may be more vulnerable in accidents.</p>
+            </div>
+
+            <!-- Number of Vehicles Involved -->
+            <div class="h-inputfield">
+                <h3><label for="Number_of_vehicles_involved">Number of Vehicles Involved</label></h3>
+                <p>This input indicates how many vehicles were involved in the accident. More vehicles typically increase the severity of the accident.</p>
+            </div>
+
+            <!-- Number of Casualties -->
+            <div class="h-inputfield">
+                <h3><label for="Number_of_casualties">Number of Casualties</label></h3>
+                <p>The number of people injured or killed in the accident. This variable is critical in determining the overall severity.</p>
+            </div>
+
+            <!-- Types of Junction -->
+            <div class="h-inputfield">
+                <h3><label for="Types_of_Junction">Types of Junction</label></h3>
+                <p>This input refers to the type of junction where the accident occurred. Junction types such as T-junction, Crossroads, and Roundabouts may have different accident risks.</p>
+            </div>
+
+            <!-- Area Accident Occurred -->
+            <div class="h-inputfield">
+                <h3><label for="Area_accident_occured">Area Accident Occurred</label></h3>
+                <p>This input refers to the geographical area where the accident took place, such as residential areas, urban areas, or rural areas.</p>
+            </div>
+
+            <!-- Light Conditions -->
+            <div class="h-inputfield">
+                <h3><label for="Light_conditions">Light Conditions</label></h3>
+                <p>This input describes the lighting conditions at the time of the accident. Daylight, darkness, and street lighting can all influence accident severity.</p>
+            </div>
+
+            <!-- Weather Conditions -->
+            <div class="h-inputfield">
+                <h3><label for="Weather_conditions">Weather Conditions</label></h3>
+                <p>This input refers to the weather conditions at the time of the accident, including normal, rainy, foggy, or snowy weather, which can all affect driving and accident severity.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

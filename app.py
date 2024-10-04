@@ -63,7 +63,15 @@ def prediction(list):
         
         return severity_mapping.get(predicted_value)
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+
+@app.route('/predictor', methods=['POST', 'GET'])
 def index():
     pred = ''
     form_data = {}
@@ -124,7 +132,7 @@ def index():
       
         print(pred)
 
-    return render_template("index.html", pred = pred, form_data=form_data)
+    return render_template("predictor.html", pred = pred, form_data=form_data)
 
 if __name__ == '__main__':
     

@@ -91,13 +91,19 @@ h3{
   font-size: 150%;
 }
 
-.inputfield {
+p {
+  padding: 0 0 40px 0;
+  color: #fdfafa;
+  font-size: larger;
+}
+
+.inputfield, .h-inputfield {
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
 
-.inputfield label {
+.inputfield label, .h-inputfield label{
   font-size: 110%;
   font-weight: 600;
   padding-bottom: 10px;
@@ -113,6 +119,29 @@ h3{
   color: #D8A34F;
   background-color: #343e48;
   height: 50px;
+}
+
+/* Container class for hover effect */
+.h-inputfield {
+  padding: 20px;
+  width: 96%;
+  border-radius: 12px;
+  position: relative; /* For proper positioning */
+  overflow: hidden; /* To ensure it doesn’t overflow */
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoom-in and float effect on hover */
+.h-inputfield:hover {
+  transform: scale(1.1); /* Zoom in slightly */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow for floating effect */
+  z-index: 10; /* Bring the element in front */
+}
+
+/* For smoother floating experience */
+.h-inputfield:active {
+  transform: scale(1.05); /* Reduce zoom when active/clicked */
 }
 
 .button {
